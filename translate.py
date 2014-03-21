@@ -66,7 +66,7 @@ class LocalfileTranslateCommand(sublime_plugin.TextCommand):
 class NetworkTranslateCommand(LocalfileTranslateCommand):
     def query(self, word, maxline=None):
         user_agent = setting.get('user_agent', 'sublime plugin')
-        return netdict.qqdict(word, user_agent)
+        return netdict.youdao(word, user_agent)
 
 class HistoryTranslateListener(sublime_plugin.EventListener):
     def on_selection_modified(self, view):
